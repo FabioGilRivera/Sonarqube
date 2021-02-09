@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    restart: unless-stopped
+    networks:
+      - sonarnet
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+    volumes:
+      - postgresql:/var/lib/postgresql
+      - postgresql_data:/var/lib/postgresql/data
+
+networks:
+  sonarnet:
+
+volumes:
+  postgresql:
+  postgresql_data:
