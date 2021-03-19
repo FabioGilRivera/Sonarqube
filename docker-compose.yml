@@ -8,7 +8,7 @@ services:
       - sonarnet
     environment:
       - POSTGRES_USER=sonar
-      - POSTGRES_PASSWORD=123fenix
+      - POSTGRES_PASSWORD=sonar
     volumes:
       - $PWD/postgresql:/var/lib/postgresql
       - $PWD/postgresql_data:/var/lib/postgresql/data
